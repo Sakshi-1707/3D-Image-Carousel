@@ -1,0 +1,89 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-half {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3cb7ec;
+    perspective: 1000px;
+  }
+  
+  .bottom-half {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2980b9;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    line-height: 1.5;
+  }
+  
+  /* Carousel styles */
+  .carousel-container {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 12s infinite linear;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .slide:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
+  .slide:nth-child(2) { transform: rotateY(90deg) translateZ(250px); }
+  .slide:nth-child(3) { transform: rotateY(180deg) translateZ(250px); }
+  .slide:nth-child(4) { transform: rotateY(270deg) translateZ(250px); }
+  
+  @keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+  }
+
+  .life {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  
